@@ -1,10 +1,27 @@
 // ques link
 // https://practice.geeksforgeeks.org/problems/union-of-two-sorted-arrays-1587115621/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=union-of-two-sorted-arrays
 
+// using map TC O((m+n)log(m+n))
+// Space Complexity : O(m+n) If Space of ans Vector is considered. other wise O(1)
 
+#include <bits/stdc++.h>
+using namespace std;
+vector < int > FindUnion(int arr1[], int arr2[], int n, int m) 
+{
+    map < int, int > freq;
+    vector < int > ans;
 
+    for (int i = 0; i < n; i++)
+      freq[arr1[i]]++;
 
+    for (int i = 0; i < m; i++)
+      freq[arr2[i]]++;
 
+    for (auto & it: freq)
+      ans.push_back(it.first);
+
+    return ans;
+}
 
 // Optimal Solution time complexity o(m+n)
 #include <bits/stdc++.h>
