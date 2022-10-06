@@ -23,7 +23,7 @@ vector < int > FindUnion(int arr1[], int arr2[], int n, int m)
     return ans;
 }
 
-// Optimal Solution time complexity o(m+n)
+// Optimal Solution using 2 pointer time complexity o(m+n)
 #include <bits/stdc++.h>
 using namespace std;
 
