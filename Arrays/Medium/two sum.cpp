@@ -1,3 +1,5 @@
+// ques link : https://leetcode.com/problems/two-sum/
+
 #include<bits/stdc++.h>
 using namespace std;
 class Solution {
