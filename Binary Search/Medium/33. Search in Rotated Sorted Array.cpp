@@ -26,14 +26,14 @@ int search(vector<int> &nums, int target)
         if (nums[mid] == target)
             return mid;
         else if (nums[s] <= nums[mid])
-        { //  s to md is sorted
+        { //  s to midd is sorted
             if (nums[mid] > target && nums[s] <= target)
                 e = mid - 1;
             else
                 s = mid + 1;
         }
         else if (nums[e] >= nums[mid])
-        { //  s to md is sorted
+        { //  mid to e is sorted
             if (nums[mid] < target && nums[e] >= target)
                 s = mid + 1;
             else
