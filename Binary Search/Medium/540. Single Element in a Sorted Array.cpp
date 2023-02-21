@@ -9,15 +9,12 @@ int singleNonDuplicate(vector<int> &nums)
     while (s < e)
     {
         int mid = s + (e - s) / 2;
-        if (nums.size() > 2)
+        if ((mid % 2 == 0 && nums[mid + 1] == nums[mid]) || (mid % 2 != 0 && nums[mid - 1] == nums[mid]))
         {
-            if ((mid % 2 == 0 && nums[mid + 1] == nums[mid]) || (mid % 2 != 0 && nums[mid - 1] == nums[mid]))
-            {
-                s = mid + 1;
-            }
-            else
-                e = mid;
+            s = mid + 1;
         }
+        else
+            e = mid;
     }
     return nums[s];
 }
